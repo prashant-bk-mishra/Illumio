@@ -43,7 +43,10 @@ java FlowLogAnalyzerTest
 
 # Thoughts
 
+- This only supports version 2 and not custom.
+
 - Console outputs should ideally be replaced with a logging framework.
+
 - File readers and writers may not be closed properly in case of exceptions. In production, we should probably use try-with-resources statements to ensure that resources are closed automatically.
 
 - We can use multi-threading to process large flow log files in parallel, splitting the file into chunks and processing each independently. Just need to be mindful of thread safety when updating shared data structures.
